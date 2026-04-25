@@ -7,8 +7,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Install app runner prerequisites
-RUN pip install --no-cache-dir fastapi uvicorn pydantic
+# Install runtime + training dependencies
+RUN pip install --no-cache-dir \
+    fastapi uvicorn pydantic \
+    torch --index-url https://download.pytorch.org/whl/cu121 \
+    trl transformers peft accelerate datasets \
+    matplotlib bitsandbytes \
+    unsloth
 
 # Copy project files
 COPY . /app
@@ -18,4 +23,7 @@ RUN pip install --no-cache-dir -e .
 
 EXPOSE 7860
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
+ENV ENABLE_WEB_INTERFACE=true
+
+# At startup: train (generates plots), then serve
+CMD bash -c "python train_hf.py 2>&1 | tee outputs/training_log.txt; uvicorn app:app --host 0.0.0.0 --port 7860"
