@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "district-accord"
+version = "0.1.0"
+description = "District Accord: Multi-Agent Reinforcement Learning Environment"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.0",
+]
+train = [
+    # Phase 6: uncomment when self-play + GRPO training is added.
+    # "trl>=0.8",
+    # "torch>=2.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["district_accord*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["district_accord"]
+omit = ["tests/*", "examples/*"]
