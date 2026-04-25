@@ -1,0 +1,43 @@
+============================================================
+  District Accord — Phase 1 Episode
+  Districts : 2
+  Max turns : 20
+  Seed      : 42
+  Policy    : random
+============================================================
+  [init] District(0) res=0.630 stab=0.596 exp=0.000 [alive]
+  [init] District(1) res=0.675 stab=0.794 exp=0.000 [alive]
+  [init] CrisisSystem(level=0.052, tier=CALM)
+------------------------------------------------------------
+  T01 | crisis=0.106 (CALM) | D0=IGNORE | D1=IGNORE | D0 r=+0.4 | D1 r=+0.4 | D0 stab=0.584 | D1 stab=0.782
+  T02 | crisis=0.106 (CALM) | D0=RECOVER | D1=INVEST | D0 r=+1.1 | D1 r=+1.0 | D0 stab=0.692 | D1 stab=0.790
+  T03 | crisis=0.139 (CALM) | D0=INVEST | D1=IGNORE | D0 r=+1.0 | D1 r=+0.5 | D0 stab=0.699 | D1 stab=0.777
+  T04 | crisis=0.134 (CALM) | D0=IGNORE | D1=IGNORE | D0 r=+0.5 | D1 r=+0.5 | D0 stab=0.686 | D1 stab=0.764
+  T05 | crisis=0.160 (CALM) | D0=DEFEND | D1=IGNORE | D0 r=+1.1 | D1 r=+0.5 | D0 stab=0.773 | D1 stab=0.751
+  T06 | crisis=0.171 (CALM) | D0=PROPOSE_COALITION | D1=SHARE_RESOURCES | D0 r=+1.0 | D1 r=+1.0 | D0 stab=0.760 | D1 stab=0.738
+  T07 | crisis=0.180 (CALM) | D0=IGNORE | D1=IGNORE | D0 r=+0.5 | D1 r=+0.5 | D0 stab=0.746 | D1 stab=0.724
+  T08 | crisis=0.195 (CALM) | D0=IGNORE | D1=IGNORE | D0 r=+0.5 | D1 r=+0.5 | D0 stab=0.732 | D1 stab=0.710
+  T09 | crisis=0.219 (ELEVATED) | D0=PROPOSE_COALITION | D1=DEFEND | D0 r=+1.0 | D1 r=+1.1 | D0 stab=0.718 | D1 stab=0.796
+  T10 | crisis=0.254 (ELEVATED) | D0=IGNORE | D1=PROPOSE_COALITION | D0 r=+0.5 | D1 r=+1.0 | D0 stab=0.703 | D1 stab=0.781
+  T11 | crisis=0.272 (ELEVATED) | D0=PROPOSE_COALITION | D1=INVEST | D0 r=+1.0 | D1 r=+1.0 | D0 stab=0.687 | D1 stab=0.785
+  T12 | crisis=0.331 (ELEVATED) | D0=DEFEND | D1=SHARE_RESOURCES | D0 r=+1.0 | D1 r=+0.9 | D0 stab=0.771 | D1 stab=0.769
+  T13 | crisis=0.299 (ELEVATED) | D0=IGNORE | D1=RECOVER | D0 r=+0.5 | D1 r=+1.1 | D0 stab=0.755 | D1 stab=0.873
+  T14 | crisis=0.320 (ELEVATED) | D0=INVEST | D1=IGNORE | D0 r=+1.0 | D1 r=+0.5 | D0 stab=0.758 | D1 stab=0.856
+  T15 | crisis=0.350 (ELEVATED) | D0=PROPOSE_COALITION | D1=INVEST | D0 r=+1.0 | D1 r=+1.0 | D0 stab=0.741 | D1 stab=0.859
+  T16 | crisis=0.364 (ELEVATED) | D0=PROPOSE_COALITION | D1=IGNORE | D0 r=+1.0 | D1 r=+1.0 | D0 stab=0.724 | D1 stab=0.842
+  T17 | crisis=0.354 (ELEVATED) | D0=IGNORE | D1=PROPOSE_COALITION | D0 r=+0.5 | D1 r=+1.0 | D0 stab=0.707 | D1 stab=0.825
+  T18 | crisis=0.379 (ELEVATED) | D0=IGNORE | D1=IGNORE | D0 r=+0.5 | D1 r=+0.5 | D0 stab=0.689 | D1 stab=0.807
+  T19 | crisis=0.428 (CRITICAL) | D0=IGNORE | D1=IGNORE | D0 r=+0.4 | D1 r=+0.4 | D0 stab=0.671 | D1 stab=0.789
+  T20 | crisis=0.421 (CRITICAL) | D0=IGNORE | D1=RECOVER | D0 r=+1.0 | D1 r=+1.1 | D0 stab=0.652 | D1 stab=0.890
+
+  >>> Episode ended: TURN LIMIT at turn 20
+============================================================
+  EPISODE SUMMARY
+============================================================
+  District 0: total_reward=+15.1
+    District(0) res=0.000 stab=0.652 exp=0.421 [alive]
+  District 1: total_reward=+15.2
+    District(1) res=0.060 stab=0.890 exp=0.421 [alive]
+  Final crisis: CrisisSystem(level=0.421, tier=CRITICAL)
+  Crisis history (first 5): [0.052448240567308166, 0.10626547677634915, 0.1058375904442309, 0.13876222053446738, 0.13355752622559153]
+============================================================
