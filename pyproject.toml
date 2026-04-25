@@ -1,32 +1,41 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the BSD-style license found in the
+# LICENSE file in the root directory of this source tree.
+
 [build-system]
 requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "district-accord"
+name = "openenv-district_accord"
 version = "0.1.0"
-description = "District Accord: Multi-Agent Reinforcement Learning Environment"
-readme = "README.md"
+description = "District Accord Multi-Agent RL Environment for OpenEnv"
 requires-python = ">=3.10"
-license = { text = "MIT" }
 dependencies = [
-    "numpy>=1.24",
+    # Core OpenEnv runtime
+    "openenv-core[core]>=0.2.2",
+    # Environment-specific dependencies
+    "numpy>=1.19.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "pydantic>=2.0.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=7.4",
-    "pytest-cov>=4.0",
-]
-train = [
-    # Phase 6: uncomment when self-play + GRPO training is added.
-    # "trl>=0.8",
-    # "torch>=2.1",
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
 ]
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["district_accord*"]
+[project.scripts]
+# Server entry point - enables: uv run --project . server
+server = "district_accord.server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["district_accord", "district_accord.core", "district_accord.engine", "district_accord.policy", "district_accord.spaces", "district_accord.utils", "district_accord.server"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

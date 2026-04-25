@@ -1,3 +1,12 @@
+---
+title: District Accord
+emoji: 🌍
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+---
+
 # District Accord
 
 > **A Multi-Agent Reinforcement Learning Environment for Complex Social Dilemmas**
@@ -14,6 +23,15 @@ In real-world crises—whether climate emergencies, economic downturns, or local
 - Successful policies must learn to dynamically negotiate, build trust, form coalitions, and distribute resources under the pressure of severe TTL-based (Time-to-Live) actions.
 
 The goal is to study how RL agents learn advanced negotiation, diplomacy, and trust-based strategies in a non-zero-sum game.
+
+Themes covered: `multi-agent-interactions`, `long-horizon-planning`, `self-improvement`
+
+---
+
+## 🔗 Project Links
+- **HuggingFace Space URL**: [TBD]
+- **Colab Training Script**: [TBD]
+- **Mini-blog / Video Link**: [TBD]
 
 ---
 
@@ -42,7 +60,10 @@ Agents receive a highly structured observation dict and flattened vectors contai
 ---
 
 ## 📊 Performance & Results
-Rigorous exploit testing and system auditing demonstrate the environment's RL readiness:
+Rigorous exploit testing and system auditing demonstrate the environment's RL readiness.
+
+### Reward Curve
+[PLACEHOLDER FOR REWARD CURVE IMAGES]
 
 1. **Exploits Mitigated:**
    - *Trust Farming:* Pure trust signaling and cyclic proposing decays naturally. The environment caps negotiation loops via built-in cooldowns and TTL constraints.

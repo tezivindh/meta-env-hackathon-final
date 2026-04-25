@@ -1,0 +1,17 @@
+name: district-accord
+version: 0.1.0
+description: |
+  A Multi-Agent Reinforcement Learning Environment structured to study complex social dilemmas, trust formation, and negotiation.
+themes:
+  - multi-agent-interactions
+  - long-horizon-planning
+  - self-improvement
+endpoint_paths:
+  - /reset
+  - /step
+  - /state
+  - /health
+max_episode_length: 100
+num_agents: 12
+observation_space_type: dict
+action_space_type: dict
