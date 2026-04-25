@@ -18,6 +18,7 @@ app_port: 7860
 ## 🔗 Project Links
 - **HuggingFace Space**: [tezivindh1/district-accord](https://huggingface.co/spaces/tezivindh1/district-accord)
 - **GitHub Repository**: [meta-env-hackathon-final](https://github.com/tezivindh/meta-env-hackathon-final)
+- **Colab Training Notebook**: [Open in Colab](https://colab.research.google.com/drive/1cmW1jtnx8WgGfrKSc2JlCz-i0X5rjkh6?usp=sharing)
 - **API Health Check**: [/health endpoint](https://tezivindh1-district-accord.hf.space/health)
 
 ---
