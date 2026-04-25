@@ -86,6 +86,12 @@ td{padding:10px 12px;border-bottom:1px solid #1e293b;font-size:.95rem}
 </html>"""
 
 
+@app.get("/", response_class=HTMLResponse)
+def root():
+    """Root route — serves the web dashboard."""
+    return WEB_HTML
+
+
 @app.get("/web", response_class=HTMLResponse)
 def web_interface():
     """Web dashboard served at /web for HuggingFace Spaces."""
