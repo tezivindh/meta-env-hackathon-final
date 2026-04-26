@@ -35,6 +35,7 @@ Reply with ONLY the action name. Nothing else."""
 AGENT_ID = 0
 
 # ── Config ────────────────────────────────────────────────────────────────
+# For normal training purposes we can increase it to 12 and 100
 train_cfg = EnvConfig(num_districts=2, max_turns=20)
 
 
